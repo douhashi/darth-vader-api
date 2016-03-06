@@ -123,5 +123,4 @@ RSpec.describe Api::ItemsController, type: :controller do
       }.to change(Item, :count).by(-1)
     end
   end
-
 end

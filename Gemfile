@@ -31,6 +31,7 @@ end
 group :development do
   gem 'spring'
   gem 'web-console'
+  gem 'rubocop'
 end
 
 gem 'factory_girl_rails'
