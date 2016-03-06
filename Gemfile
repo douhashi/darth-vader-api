@@ -1,28 +1,36 @@
 source 'https://rubygems.org'
-
-
 gem 'rails', '4.2.5.2'
-
 gem 'rails-api'
+gem 'mysql2'
 
-gem 'spring', :group => :development
+# DEVELOP AND TESTING
+group :development, :test do
+  # rspec
+  gem 'rspec-rails', '~> 3.3.3'
+  gem 'rspec-collection_matchers'
+  gem 'spring-commands-rspec'
 
+  # guard
+  gem 'guard-rspec'
+  gem 'guard-spring'
 
-gem 'sqlite3'
+  gem 'rails-sh'
+  gem 'pry-rails' # binging.pry
+  gem 'pry-nav'   # step/next/continue
+  gem 'pry-byebug'
+  gem 'pry-doc'
 
+  gem 'bullet'
+  gem 'hirb'
+  gem 'hirb-unicode'
 
+  gem 'quiet_assets'
+  gem 'faker'
+end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+group :development do
+  gem 'spring'
+  gem 'web-console'
+end
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano', :group => :development
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'factory_girl_rails'
